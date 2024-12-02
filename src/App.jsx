@@ -1,70 +1,59 @@
-import { Suspense, useEffect, useState } from "react";
-import { PostContainer } from "./components/PostContainer";
-import { UserDetails } from "./components/UserDetails";
-import { UserContext } from "./utils/contexts/UserContext";
-import { useFetchUser } from "./utils/hooks/useFetchUser";
-import { Outlet, Link, useNavigate } from "react-router-dom";
-import { TestInputField } from "./components/TestInputField";
+import {UserProfile} from "./components/UserProfile.jsx";
+import {UserDetails} from "./components/UserDetails.jsx";
 
-export default function App({ usersData }) {
-	const { user, loading, error } = useFetchUser(2);
-	const [userData, setUserData] = useState();
-	// const navigate = useNavigate();
+export default function App() {
+    const mockUsers = [
+        {
+            id: 1,
+            username: 'John1',
+            email: 'john1@example.com',
+        },
+        {
+            id: 2,
+            username: 'John2',
+            email: 'john2@example.com',
+        },
+        {
+            id: 3,
+            username: 'John2',
+            email: 'john2@example.com',
+        },
+        {
+            id: 4,
+            username: 'John2',
+            email: 'john2@example.com',
+        }
+    ];
 
-	const [users, setUsers] = useState(usersData);
+    return (
+        <div>
+            {mockUsers.map(
+                (user) => {
+                    return (
+                        <UserDetails
+                            key={user.id}
+                            setUsers={() => {return true;}}
+                            user={user}
+                        />
+                    );
+                }
+            )}
 
-	useEffect(() => {
-		if (!loading && !error && user) {
-			setUserData(user);
-		}
-	}, [loading, error, user]);
-
-	return (
-		<Suspense fallback={<div>Loading...</div>}>
-			<TestInputField />
-			{users.map((user) => (
-				<UserDetails key={user.id} user={user} setUsers={setUsers} />
-			))}
-			<nav>
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/users">Users</Link>
-					</li>
-					<li>
-						<Link to="/blog-posts">Blogs</Link>
-					</li>
-				</ul>
-			</nav>
-			{/* <div>
-				<label htmlFor="data">Enter Data</label>
-				<input
-					type="text"
-					id="data"
-					onChange={(e) => {
-						if (e.target.value.length > 10) {
-							navigate("/blog-posts", {
-								state: {
-									posts: [
-										{
-											id: 1,
-											title: "hello world",
-											content: "welcome to my first post",
-										},
-									],
-								},
-							});
-						}
-					}}
-				/>
-			</div> */}
-
-			<UserContext.Provider value={{ ...userData, setUserData }}>
-				<PostContainer />
-			</UserContext.Provider>
-			<Outlet />
-		</Suspense>
-	);
+            <h1>Root Component</h1>
+            <UserProfile
+                username="Bob"
+                age={25}
+                favoriteFoods={[
+                    {
+                        name: "Sushi",
+                        id: "sushi",
+                    },
+                    {
+                        name: "Pizza",
+                        id: "pizza",
+                    }
+                ]}
+            />
+        </div>
+    )
 }
