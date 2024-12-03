@@ -3,6 +3,7 @@ import {UserDetails} from "./components/UserDetails.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 import {RegisterForm} from "./components/RegisterForm.jsx";
 import {useState, useEffect} from "react";
+import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
 
 export default function App() {
     const isAuthenticated = true;
@@ -85,16 +86,32 @@ export default function App() {
             return () => {
                 controller.abort();
             };
-        }
+        },
+        []
     );
 
     useEffect(
         () => {
-            const controller = new AbortController();
-        }
+            const resizeEventHandler = (e) => {
+                console.log("Window/ViewPort Resized");
+            };
+
+            window.addEventListener(
+                "resize",
+                resizeEventHandler
+            );
+
+            // Called when the component is unmounted
+            return () => {
+                window.removeEventListener("resize", resizeEventHandler);
+            }
+        },
+        []
     );
 
-            const [mockUsers, setUsers] = useState([
+    useDocumentClick();
+
+    const [mockUsers, setUsers] = useState([
         {
             id: 1,
             username: 'John1',
@@ -119,6 +136,10 @@ export default function App() {
 
     return isAuthenticated ? (
         <div>
+            <div>
+
+            </div>
+            <br/>
             <form
                 onSubmit={
                 (e) => {
