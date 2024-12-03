@@ -2,7 +2,7 @@ import {UserProfile} from "./components/UserProfile.jsx";
 import {UserDetails} from "./components/UserDetails.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 import {RegisterForm} from "./components/RegisterForm.jsx";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 export default function App() {
     const isAuthenticated = true;
@@ -10,7 +10,91 @@ export default function App() {
     const [email, setEmail] = useState("");
     const [counter, setCounter] = useState(5);
 
-    const [mockUsers, setUsers] = useState([
+    const [secondCounter, setSecondCounter] = useState(0);
+    const [sync, setSync] = useState(false);
+
+    const [blogPostData, setBlogPostData] = useState(
+        {
+            title: "",
+            body: "",
+        }
+    );
+
+    // Called when the component is mounted/rendered
+    // Can be called many times especially when state changes and causes the
+    // component to re-render
+    // With [] empty dependency array, the useEffect is only called once.
+    // With something in the [counter], then useEffect is called
+    // whenever that state is changed.
+    useEffect(
+        () => {
+            console.log("Rendering...");
+            document.title = "React Tutorial";
+        },
+        [
+            sync
+        ]
+    );
+
+    useEffect(() => {
+        console.log("Fetching...");
+        fetch(
+            "https://jsonplaceholder.typicode.com/users",
+            {
+                method: "GET",
+            })
+            .then(
+                (response) => {
+                    console.log(response);
+                    return response.json();
+                }
+            )
+            .then(
+                (json) => {
+                    console.log(json)
+                }
+            )
+            .catch(
+                (err) => {
+                    console.log(err);
+                }
+            )
+    }, []);
+
+    useEffect(
+        () => {
+            const controller = new AbortController();
+            async function fetchUsers() {
+                // The await keyword blocks the script until the call returns
+                try {
+                    const response = await fetch(
+                        "https://jsonplaceholder.typicode.com/users",
+                        {signal: controller.signal}
+                    );
+                    const json = await response.json();
+                    console.log("Fetching2...");
+                    console.log(json);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+            fetchUsers();
+
+            // Called when componenet unmounts
+            // Clean up function
+            return () => {
+                controller.abort();
+            };
+        }
+    );
+
+    useEffect(
+        () => {
+            const controller = new AbortController();
+        }
+    );
+
+            const [mockUsers, setUsers] = useState([
         {
             id: 1,
             username: 'John1',
@@ -35,6 +119,97 @@ export default function App() {
 
     return isAuthenticated ? (
         <div>
+            <form
+                onSubmit={
+                (e) => {
+                    e.preventDefault();
+                    if (blogPostData.title && blogPostData.body) {
+                        console.log("blogPostData fetching post", blogPostData);
+                        fetch(
+                            "https://jsonplaceholder.typicode.com/posts",
+                            {
+                                method: "POST",
+                                body: JSON.stringify({
+                                    userId: 1,
+                                    title: blogPostData.title,
+                                    body: blogPostData.body,
+                                }),
+                                headers: {
+                                    "Content-Type": "application/json; charset=UTF-8",
+                                },
+                            }
+                        )
+                        .then(response =>
+                                response.json()
+                        )
+                        .then((json) => {
+                               console.log("Success!");
+                                console.log(json);
+                            }
+                        )
+                        .catch((err) => {
+                                console.log(err);
+                            }
+                        );
+                    }
+                }}
+            >
+                <label htmlFor="title">Title</label>
+                <br/>
+                <input
+                    type="text"
+                    id="title"
+                    value={blogPostData.title}
+                    onChange={(e) => {
+                        setBlogPostData((currentBlogPostData) =>
+                            (
+                                {...currentBlogPostData, title: e.target.value}
+                            )
+                        );
+                    }}
+                />
+                <br/>
+                <label htmlFor="body">Body</label>
+                <br/>
+                <input
+                    type="text"
+                    id="body"
+                    value={blogPostData.body}
+                    onChange={(e) => {
+                        setBlogPostData((currentBlogPostData) =>
+                            (
+                                {...currentBlogPostData, body: e.target.value}
+                            )
+                        );
+                    }}
+                />
+                <br/>
+                <button type="submit">
+                    Create Post
+                </button>
+            </form>
+            <br/>
+
+            <div>
+                <div>You clicked the button {secondCounter} times</div>
+                <button
+                    onClick={() => {
+                        setSecondCounter((secondCounter) => secondCounter + 1)
+                    }}
+                >
+                    Click Me
+                </button>
+                <button
+                    onClick={() => {
+                        setSync((current) => !current);
+                    }}
+                >
+                    Sync
+                </button>
+
+            </div>
+            <br/>
+
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
