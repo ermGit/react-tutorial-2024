@@ -4,6 +4,8 @@ import LoginForm from "./components/LoginForm.jsx";
 import {RegisterForm} from "./components/RegisterForm.jsx";
 import {useState, useEffect} from "react";
 import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
+import {UserContext} from "./utils/contexts/UserContext.js";
+import {PostContainer} from "./components/PostContainer.jsx";
 
 export default function App() {
     const isAuthenticated = true;
@@ -81,7 +83,7 @@ export default function App() {
             }
             fetchUsers();
 
-            // Called when componenet unmounts
+            // Called when component unmounts
             // Clean up function
             return () => {
                 controller.abort();
@@ -136,9 +138,17 @@ export default function App() {
 
     return isAuthenticated ? (
         <div>
-            <div>
+            <UserContext.Provider value={{
+                id:1,
+                username: "John1",
+                email: "john1@example.com",
+                displayName: "John1",
+            }}>
+                <div>
+                    <PostContainer />
+                </div>
+            </UserContext.Provider>
 
-            </div>
             <br/>
             <form
                 onSubmit={
