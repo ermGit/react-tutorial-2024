@@ -6,6 +6,7 @@ import {useState, useEffect} from "react";
 import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
 import {UserContext} from "./utils/contexts/UserContext.js";
 import {PostContainer} from "./components/PostContainer.jsx";
+import {useFetchUser} from "./utils/hooks/userFetchUser.js";
 
 export default function App() {
     const isAuthenticated = true;
@@ -23,12 +24,16 @@ export default function App() {
         }
     );
 
-    const [userData, setUserData] = useState({
-        id:1,
-        username: "John1",
-        email: "john1@example.com",
-        displayName: "John1",
-    });
+    const {user, loading, error} = useFetchUser(1);
+    console.log(user, loading, error);
+
+    const [userData, setUserData] = useState({});
+
+    useEffect(() => {
+        if (!loading && !error && user) {
+            setUserData(user);
+        }
+    }, [loading, error, user]);
 
     // Called when the component is mounted/rendered
     // Can be called many times especially when state changes and causes the
@@ -147,7 +152,7 @@ export default function App() {
         <div>
             <UserContext.Provider value={{...userData, setUserData}}>
                 <div>
-                    <PostContainer />
+                    {loading ? 'Loading...' : <PostContainer />}
                 </div>
             </UserContext.Provider>
 

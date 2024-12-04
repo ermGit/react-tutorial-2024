@@ -9,7 +9,7 @@ export function PostContainer() {
 
     return (
         <div>
-            <div>{userContextData.displayName}</div>
+            <div>{userContextData.name}</div>
             <PostContent/>
         </div>
     );

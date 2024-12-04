@@ -14,7 +14,7 @@ export function PostContentButtons() {
                     userContextData.setUserData(
                         (currentState) => ({
                             ...currentState,
-                            displayName: "Updated Display Name",
+                            name: "Updated Display Name",
                         })
                     )
                 }}
