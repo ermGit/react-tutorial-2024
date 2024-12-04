@@ -7,7 +7,7 @@ import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
 import {UserContext} from "./utils/contexts/UserContext.js";
 import {PostContainer} from "./components/PostContainer.jsx";
 import {useFetchUser} from "./utils/hooks/userFetchUser.js";
-import {Outlet, Link} from "react-router-dom";
+import {Outlet, Link, useNavigate} from "react-router-dom";
 
 export default function App() {
     const isAuthenticated = true;
@@ -29,6 +29,8 @@ export default function App() {
     console.log(user, loading, error);
 
     const [userData, setUserData] = useState({});
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (!loading && !error && user) {
@@ -170,6 +172,31 @@ export default function App() {
                     </ul>
                 </div>
             </nav>
+
+            <div>
+                <label htmlFor="data">Enter Data</label>
+                <br/>
+                <input
+                    type="text"
+                    id="data"
+                    onChange={(e) => {
+                        if (e.target.value.length > 10) {
+                            navigate('/blog-posts', {
+                                state: {
+                                    posts: [
+                                        {
+                                            id: 1,
+                                            title: "hello world!",
+                                            content: "Welcome to my first post",
+                                        }
+                                    ],
+                                },
+                            });
+                        }
+                    }}
+                />
+            </div>
+            <br/>
 
             <UserContext.Provider value={{...userData, setUserData}}>
                 <div>
