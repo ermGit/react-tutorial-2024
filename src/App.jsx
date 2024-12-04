@@ -23,6 +23,13 @@ export default function App() {
         }
     );
 
+    const [userData, setUserData] = useState({
+        id:1,
+        username: "John1",
+        email: "john1@example.com",
+        displayName: "John1",
+    });
+
     // Called when the component is mounted/rendered
     // Can be called many times especially when state changes and causes the
     // component to re-render
@@ -138,12 +145,7 @@ export default function App() {
 
     return isAuthenticated ? (
         <div>
-            <UserContext.Provider value={{
-                id:1,
-                username: "John1",
-                email: "john1@example.com",
-                displayName: "John1",
-            }}>
+            <UserContext.Provider value={{...userData, setUserData}}>
                 <div>
                     <PostContainer />
                 </div>
