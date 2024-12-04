@@ -7,6 +7,7 @@ import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
 import {UserContext} from "./utils/contexts/UserContext.js";
 import {PostContainer} from "./components/PostContainer.jsx";
 import {useFetchUser} from "./utils/hooks/userFetchUser.js";
+import {Outlet, Link} from "react-router-dom";
 
 export default function App() {
     const isAuthenticated = true;
@@ -150,6 +151,26 @@ export default function App() {
 
     return isAuthenticated ? (
         <div>
+            <div>
+                <Outlet></Outlet>
+            </div>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            {/*Link Doesn't refresh the whole page*/}
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/users">Users</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/blog-posts">Blog Posts</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
             <UserContext.Provider value={{...userData, setUserData}}>
                 <div>
                     {loading ? 'Loading...' : <PostContainer />}
