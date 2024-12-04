@@ -6,6 +6,6 @@ describe('UsernameDisplay', () => {
     it('should render username correctly', ({expect}) => {
         const result = render(<UserNameDisplay username="ansonthedev" />);
         //expect(result.container).toMatchSnapshot();
-        screen.getByText('ansonthedev')
+        expect(screen.getByText('ansonthedev')).toBeInTheDocument();
     })
 })
