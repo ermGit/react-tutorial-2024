@@ -70,6 +70,7 @@ export function UserDetails({ user, setUsers }) {
 				<br/>
 				{isEditing ?
 					<input
+						aria-label="username"
 						id="username"
 						name="username"
 						value={username}
@@ -85,6 +86,7 @@ export function UserDetails({ user, setUsers }) {
 				<br/>
 				{isEditing ?
 					<input
+						aria-label="email"
 						id="email"
 						name="email"
 						value={email}

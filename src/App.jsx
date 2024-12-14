@@ -7,7 +7,7 @@ import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
 import {UserContext} from "./utils/contexts/UserContext.js";
 import {PostContainer} from "./components/PostContainer.jsx";
 import {useFetchUser} from "./utils/hooks/userFetchUser.js";
-import {Outlet, Link, useNavigate} from "react-router-dom";
+//import {Outlet, Link, useNavigate} from "react-router-dom";
 
 export default function App() {
     const isAuthenticated = true;
@@ -30,7 +30,7 @@ export default function App() {
 
     const [userData, setUserData] = useState({});
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     useEffect(() => {
         if (!loading && !error && user) {
@@ -154,25 +154,29 @@ export default function App() {
     return isAuthenticated ? (
         <div>
             <div>
-                <Outlet></Outlet>
+                {/*<Outlet></Outlet>*/}
             </div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             {/*Link Doesn't refresh the whole page*/}
-                            <Link to="/">Home</Link>
+                            {/*<Link to="/">Home</Link>*/}
                         </li>
                         <li className="nav-item">
-                            <Link to="/users">Users</Link>
+                            {/*<Link to="/users">Users</Link>*/}
                         </li>
                         <li className="nav-item">
-                            <Link to="/blog-posts">Blog Posts</Link>
+                            {/*<Link to="/blog-posts">Blog Posts</Link>*/}
                         </li>
                     </ul>
                 </div>
             </nav>
 
+            <div>
+                {mockUsers.map((user) => (<UserDetails key={user.id} user={user} setUsers={setUsers} />))}
+            </div>
+            <br/>
             <div>
                 <label htmlFor="data">Enter Data</label>
                 <br/>
@@ -181,6 +185,7 @@ export default function App() {
                     id="data"
                     onChange={(e) => {
                         if (e.target.value.length > 10) {
+                            /*
                             navigate('/blog-posts', {
                                 state: {
                                     posts: [
@@ -192,6 +197,7 @@ export default function App() {
                                     ],
                                 },
                             });
+                            */
                         }
                     }}
                 />

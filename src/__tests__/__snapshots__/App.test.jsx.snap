@@ -1,0 +1,1833 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > should render App correctly 1`] = `
+<div>
+  <div>
+    <div />
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+    >
+      <div
+        class="container"
+      >
+        <ul
+          class="navbar-nav"
+        >
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            1
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John1
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john1@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            2
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John2
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john2@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            3
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John3
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john3@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            4
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John4
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john4@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div>
+      <label
+        for="data"
+      >
+        Enter Data
+      </label>
+      <br />
+      <input
+        id="data"
+        type="text"
+      />
+    </div>
+    <br />
+    <div>
+      Loading...
+    </div>
+    <br />
+    <form>
+      <label
+        for="title"
+      >
+        Title
+      </label>
+      <br />
+      <input
+        id="title"
+        type="text"
+        value=""
+      />
+      <br />
+      <label
+        for="body"
+      >
+        Body
+      </label>
+      <br />
+      <input
+        id="body"
+        type="text"
+        value=""
+      />
+      <br />
+      <button
+        type="submit"
+      >
+        Create Post
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        You clicked the button 
+        0
+         times
+      </div>
+      <button>
+        Click Me
+      </button>
+      <button>
+        Sync
+      </button>
+    </div>
+    <br />
+    <form>
+      <div>
+        <label
+          for="username"
+        >
+          Username
+        </label>
+        <br />
+        <input
+          id="username"
+          name="username"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          for="email"
+        >
+          Email
+        </label>
+        <br />
+        <input
+          id="email"
+          name="email"
+          value=""
+        />
+      </div>
+      <button
+        type="submit"
+      >
+        Add User
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          1
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John1
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john1@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          2
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John2
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john2@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          3
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John3
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john3@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          4
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John4
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john4@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <h1>
+      Root Component
+    </h1>
+    <div
+      id="user-profile"
+    >
+      <b
+        class="_username_ccaf0b"
+        style="font-size: 32px; color: red; font-family: cursive;"
+      >
+        Username:
+      </b>
+      <span>
+        Bob
+      </span>
+      <b>
+        Age:
+      </b>
+      <span>
+        25
+      </span>
+      <div>
+        <span>
+          Email: 
+        </span>
+        <span>
+          bob@bob.com 
+        </span>
+      </div>
+      <section>
+        <span
+          class="_foodsTitle_38af46"
+        >
+          Favorite Foods:
+        </span>
+        <br />
+        <ul>
+          <li>
+            Sushi
+          </li>
+          <li>
+            Pizza
+          </li>
+          <li>
+            Mediterranean Food
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > should render App correctly 2`] = `
+<div>
+  <div>
+    <div />
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+    >
+      <div
+        class="container"
+      >
+        <ul
+          class="navbar-nav"
+        >
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            1
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John1
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john1@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            2
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John2
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john2@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            3
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John3
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john3@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            4
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John4
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john4@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div>
+      <label
+        for="data"
+      >
+        Enter Data
+      </label>
+      <br />
+      <input
+        id="data"
+        type="text"
+      />
+    </div>
+    <br />
+    <div>
+      Loading...
+    </div>
+    <br />
+    <form>
+      <label
+        for="title"
+      >
+        Title
+      </label>
+      <br />
+      <input
+        id="title"
+        type="text"
+        value=""
+      />
+      <br />
+      <label
+        for="body"
+      >
+        Body
+      </label>
+      <br />
+      <input
+        id="body"
+        type="text"
+        value=""
+      />
+      <br />
+      <button
+        type="submit"
+      >
+        Create Post
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        You clicked the button 
+        0
+         times
+      </div>
+      <button>
+        Click Me
+      </button>
+      <button>
+        Sync
+      </button>
+    </div>
+    <br />
+    <form>
+      <div>
+        <label
+          for="username"
+        >
+          Username
+        </label>
+        <br />
+        <input
+          id="username"
+          name="username"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          for="email"
+        >
+          Email
+        </label>
+        <br />
+        <input
+          id="email"
+          name="email"
+          value=""
+        />
+      </div>
+      <button
+        type="submit"
+      >
+        Add User
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          1
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John1
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john1@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          2
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John2
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john2@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          3
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John3
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john3@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          4
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John4
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john4@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <h1>
+      Root Component
+    </h1>
+    <div
+      id="user-profile"
+    >
+      <b
+        class="_username_ccaf0b"
+        style="font-size: 32px; color: red; font-family: cursive;"
+      >
+        Username:
+      </b>
+      <span>
+        Bob
+      </span>
+      <b>
+        Age:
+      </b>
+      <span>
+        25
+      </span>
+      <div>
+        <span>
+          Email: 
+        </span>
+        <span>
+          bob@bob.com 
+        </span>
+      </div>
+      <section>
+        <span
+          class="_foodsTitle_38af46"
+        >
+          Favorite Foods:
+        </span>
+        <br />
+        <ul>
+          <li>
+            Sushi
+          </li>
+          <li>
+            Pizza
+          </li>
+          <li>
+            Mediterranean Food
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > should render Save button correctly 1`] = `
+<div>
+  <div>
+    <div />
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+    >
+      <div
+        class="container"
+      >
+        <ul
+          class="navbar-nav"
+        >
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            1
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John1
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john1@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            2
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John2
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john2@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            3
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John3
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john3@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            4
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John4
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john4@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div>
+      <label
+        for="data"
+      >
+        Enter Data
+      </label>
+      <br />
+      <input
+        id="data"
+        type="text"
+      />
+    </div>
+    <br />
+    <div>
+      Loading...
+    </div>
+    <br />
+    <form>
+      <label
+        for="title"
+      >
+        Title
+      </label>
+      <br />
+      <input
+        id="title"
+        type="text"
+        value=""
+      />
+      <br />
+      <label
+        for="body"
+      >
+        Body
+      </label>
+      <br />
+      <input
+        id="body"
+        type="text"
+        value=""
+      />
+      <br />
+      <button
+        type="submit"
+      >
+        Create Post
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        You clicked the button 
+        0
+         times
+      </div>
+      <button>
+        Click Me
+      </button>
+      <button>
+        Sync
+      </button>
+    </div>
+    <br />
+    <form>
+      <div>
+        <label
+          for="username"
+        >
+          Username
+        </label>
+        <br />
+        <input
+          id="username"
+          name="username"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          for="email"
+        >
+          Email
+        </label>
+        <br />
+        <input
+          id="email"
+          name="email"
+          value=""
+        />
+      </div>
+      <button
+        type="submit"
+      >
+        Add User
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          1
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John1
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john1@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          2
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John2
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john2@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          3
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John3
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john3@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          4
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John4
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john4@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <h1>
+      Root Component
+    </h1>
+    <div
+      id="user-profile"
+    >
+      <b
+        class="_username_ccaf0b"
+        style="font-size: 32px; color: red; font-family: cursive;"
+      >
+        Username:
+      </b>
+      <span>
+        Bob
+      </span>
+      <b>
+        Age:
+      </b>
+      <span>
+        25
+      </span>
+      <div>
+        <span>
+          Email: 
+        </span>
+        <span>
+          bob@bob.com 
+        </span>
+      </div>
+      <section>
+        <span
+          class="_foodsTitle_38af46"
+        >
+          Favorite Foods:
+        </span>
+        <br />
+        <ul>
+          <li>
+            Sushi
+          </li>
+          <li>
+            Pizza
+          </li>
+          <li>
+            Mediterranean Food
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > should render Save button when edit button is clicked 1`] = `
+<div>
+  <div>
+    <div />
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+    >
+      <div
+        class="container"
+      >
+        <ul
+          class="navbar-nav"
+        >
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+          <li
+            class="nav-item"
+          />
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            1
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John1
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john1@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            2
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John2
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john2@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            3
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John3
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john3@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+      <div>
+        <div>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </div>
+        <div>
+          <b>
+            ID: 
+          </b>
+          <span>
+            4
+          </span>
+          <br />
+          <b>
+            Username: 
+          </b>
+          <br />
+          <span>
+            John4
+          </span>
+          <br />
+          <b>
+            Email: 
+          </b>
+          <br />
+          <span>
+            john4@example.com
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div>
+      <label
+        for="data"
+      >
+        Enter Data
+      </label>
+      <br />
+      <input
+        id="data"
+        type="text"
+      />
+    </div>
+    <br />
+    <div>
+      Loading...
+    </div>
+    <br />
+    <form>
+      <label
+        for="title"
+      >
+        Title
+      </label>
+      <br />
+      <input
+        id="title"
+        type="text"
+        value=""
+      />
+      <br />
+      <label
+        for="body"
+      >
+        Body
+      </label>
+      <br />
+      <input
+        id="body"
+        type="text"
+        value=""
+      />
+      <br />
+      <button
+        type="submit"
+      >
+        Create Post
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        You clicked the button 
+        0
+         times
+      </div>
+      <button>
+        Click Me
+      </button>
+      <button>
+        Sync
+      </button>
+    </div>
+    <br />
+    <form>
+      <div>
+        <label
+          for="username"
+        >
+          Username
+        </label>
+        <br />
+        <input
+          id="username"
+          name="username"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          for="email"
+        >
+          Email
+        </label>
+        <br />
+        <input
+          id="email"
+          name="email"
+          value=""
+        />
+      </div>
+      <button
+        type="submit"
+      >
+        Add User
+      </button>
+    </form>
+    <br />
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          1
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John1
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john1@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          2
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John2
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john2@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          3
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John3
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john3@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <div>
+      <div>
+        <button>
+          Edit
+        </button>
+        <button>
+          Delete
+        </button>
+      </div>
+      <div>
+        <b>
+          ID: 
+        </b>
+        <span>
+          4
+        </span>
+        <br />
+        <b>
+          Username: 
+        </b>
+        <br />
+        <span>
+          John4
+        </span>
+        <br />
+        <b>
+          Email: 
+        </b>
+        <br />
+        <span>
+          john4@example.com
+        </span>
+        <br />
+      </div>
+    </div>
+    <h1>
+      Root Component
+    </h1>
+    <div
+      id="user-profile"
+    >
+      <b
+        class="_username_ccaf0b"
+        style="font-size: 32px; color: red; font-family: cursive;"
+      >
+        Username:
+      </b>
+      <span>
+        Bob
+      </span>
+      <b>
+        Age:
+      </b>
+      <span>
+        25
+      </span>
+      <div>
+        <span>
+          Email: 
+        </span>
+        <span>
+          bob@bob.com 
+        </span>
+      </div>
+      <section>
+        <span
+          class="_foodsTitle_38af46"
+        >
+          Favorite Foods:
+        </span>
+        <br />
+        <ul>
+          <li>
+            Sushi
+          </li>
+          <li>
+            Pizza
+          </li>
+          <li>
+            Mediterranean Food
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
