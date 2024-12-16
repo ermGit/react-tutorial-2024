@@ -8,9 +8,10 @@ export function UserDetails({ user, setUsers }) {
 	const [email, setEmail] = useState(user.email);
 
 	return (
-		<div>
+		<div data-testid={`user-details-${user.id}`}>
 			<div>
 				<button
+					data-testid={`edit-user-button-${user.id}`}
 					onClick={(e) => {
 						setIsEditing((currentstate) => !currentstate)
 					}}
@@ -66,7 +67,7 @@ export function UserDetails({ user, setUsers }) {
 				<b>ID: </b>
 				<span>{user.id}</span>
 				<br/>
-				<b>Username: </b>
+				{isEditing ? <label htmlFor="username">Username: </label> : <b>Username: </b>}
 				<br/>
 				{isEditing ?
 					<input
@@ -82,7 +83,7 @@ export function UserDetails({ user, setUsers }) {
 					<span>{username}</span>
 				}
 				<br/>
-				<b>Email: </b>
+				{isEditing ? <label htmlFor="email">Email: </label> : <b>Email: </b>}
 				<br/>
 				{isEditing ?
 					<input

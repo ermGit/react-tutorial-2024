@@ -6,10 +6,33 @@ import "./globals.css";
 import {UsersPage} from "./pages/UsersPage.jsx";
 import {BlogPostsPage} from "./pages/BlogPostsPage.jsx";
 
+const usersData = [
+	{
+		id: 1,
+		username: 'John1',
+		email: 'john1@example.com',
+	},
+	{
+		id: 2,
+		username: 'John2',
+		email: 'john2@example.com',
+	},
+	{
+		id: 3,
+		username: 'John3',
+		email: 'john3@example.com',
+	},
+	{
+		id: 4,
+		username: 'John4',
+		email: 'john4@example.com',
+	}
+];
+
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <App />,
+		element: <App usersData={usersData} />,
 		children: [
 			{
 				path: "users",

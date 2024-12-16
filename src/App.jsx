@@ -7,9 +7,10 @@ import {useDocumentClick} from "./utils/hooks/useDocumentClick.js";
 import {UserContext} from "./utils/contexts/UserContext.js";
 import {PostContainer} from "./components/PostContainer.jsx";
 import {useFetchUser} from "./utils/hooks/userFetchUser.js";
+import PropTypes from "prop-types";
 //import {Outlet, Link, useNavigate} from "react-router-dom";
 
-export default function App() {
+export default function App({ usersData }) {
     const isAuthenticated = true;
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -128,28 +129,7 @@ export default function App() {
 
     useDocumentClick();
 
-    const [mockUsers, setUsers] = useState([
-        {
-            id: 1,
-            username: 'John1',
-            email: 'john1@example.com',
-        },
-        {
-            id: 2,
-            username: 'John2',
-            email: 'john2@example.com',
-        },
-        {
-            id: 3,
-            username: 'John3',
-            email: 'john3@example.com',
-        },
-        {
-            id: 4,
-            username: 'John4',
-            email: 'john4@example.com',
-        }
-    ]);
+    const [mockUsers, setUsers] = useState(usersData);
 
     return isAuthenticated ? (
         <div>
@@ -384,3 +364,7 @@ export default function App() {
         </div>
     );
 }
+
+App.propTypes = {
+    usersData: PropTypes.array.isRequired,
+};
