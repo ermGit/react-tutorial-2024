@@ -131,6 +131,28 @@ describe('App', () => {
                     screen.getByLabelText("Email:")
                 ).toBeInTheDocument();
             });
+
+            it('should edit 2nd User\'s name', async ({expect}) => {
+                const {container} = render(<App usersData={[usersData[0],usersData[1]]} />);
+                const userDetails = screen.getAllByTestId("user-details-2");
+                expect(userDetails[0]).toBeInTheDocument();
+
+                const editButton = within(userDetails[0]).getByRole('button', { name: `Edit` });
+                await userEvent.click(editButton);
+
+                await userEvent.type(
+                    within(userDetails[0]).getByLabelText('Username:'),
+                    "123"
+                );
+
+                await userEvent.click(
+                    within(userDetails[0]).getByRole("button", {name: "Save"})
+                );
+
+                expect(within(userDetails[0]).queryByLabelText('Username:')).toBeNull();
+
+                expect(within(userDetails[0]).getByText(usersData[1].username + '123')).toBeInTheDocument();
+            });
         });
     });
 });
