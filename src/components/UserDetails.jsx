@@ -71,6 +71,7 @@ export function UserDetails({ user, setUsers }) {
 				<br/>
 				{isEditing ?
 					<input
+						placeholder="Enter Username..."
 						aria-label="username"
 						id="username"
 						name="username"
